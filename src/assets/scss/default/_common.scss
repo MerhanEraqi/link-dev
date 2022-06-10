@@ -13,12 +13,50 @@ body{
 	color: var(--color-secondary) !important;
 }
 
+.color-orange{
+	color: var(--color-orange) !important;
+}
+.color-pink{
+	color: var(--color-pink) !important;
+}
+
+.color-green{
+	color: var(--color-green) !important;
+}
 .bg-primary{
 	background-color: var(--color-primary) !important;
 }
 
 .bg-secondary{
 	background-color: var(--color-secondary) !important;
+}
+
+.bg-orange{
+	background-color: var(--color-orange) !important;
+}
+
+.bg-pink{
+	background-color: var(--color-pink) !important;
+}
+
+.bg-green{
+	background-color: var(--color-green) !important;
+}
+
+.svg-orange{
+	path{
+		fill: var(--color-orange);
+	}
+}
+.svg-pink{
+	path{
+		fill: var(--color-pink);
+	}
+}
+.svg-green{
+	path{
+		fill: var(--color-green);
+	}
 }
 
 .h1{
@@ -65,3 +103,10 @@ body{
 	@include fluid(font-size, 22px, 28px);
 }
 
+
+.container{
+
+	@media only screen and (min-width: 3900px) {
+		max-width: 25% !important;
+	  }
+}
