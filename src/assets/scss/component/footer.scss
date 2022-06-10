@@ -1,0 +1,23 @@
+footer{
+    gap: 20px;
+    h5{
+        color: #080809;
+        font-weight: var(--p-bold);
+        padding-bottom: 34px;
+    }
+    .nav-item{
+        .nav-link{
+            font-weight: var(--p-semi-bold);
+        }
+    }
+
+    @media #{$sm-layout} {
+        .footer-logo{
+            width: 50%;
+            margin: auto;
+        }
+        .footer-logo ~ p{
+            text-align: center;
+        }
+    }
+}

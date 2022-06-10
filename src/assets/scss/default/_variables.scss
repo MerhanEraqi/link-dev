@@ -1,0 +1,35 @@
+/*-- Variables --*/
+:root {
+    //Themes colors
+    --color-primary: #181E4B;
+    --color-secondary: #5E6282;
+    --color-dark: #14183E;
+    --color-white: #FFFFFF;
+    --color-pink: #F215B6;
+    --color-green: #A6E51C;
+    --color-orang: #FF7C16;
+    --color-blue: #66CFFE;
+
+    //Font Family
+    --font-primary: 'Poppins', sans-serif;
+
+    //Font weight
+    --p-lighter: 100;
+    --p-light: 200;
+    --p-regular: 300;
+    --p-medium: 400;
+    --p-semi-bold: 500;
+    --p-bold: 600;
+    --p-extra-bold: 800;
+    --p-black: 900;
+}
+
+// Layouts Variation
+$smlg-device: 'only screen and (max-width: 1199px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
