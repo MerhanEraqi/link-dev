@@ -1,10 +1,13 @@
 import React from 'react'
+import InfoSection from '../components/InfoSection';
 import Layout from '../components/Layout'
+import MediaSection from '../components/MediaSection';
 
 const HomePage = () => {
   return (
     <Layout>
-      home
+      <InfoSection/>
+      <MediaSection/>
     </Layout>
   )
 }

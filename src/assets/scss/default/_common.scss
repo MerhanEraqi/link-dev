@@ -6,11 +6,19 @@ body{
 }
 
 .color-primary{
-	color: var(--font-primary)
+	color: var(--color-primary) !important;
 }
 
 .color-secondary{
-	color: var(--font-secondary);
+	color: var(--color-secondary) !important;
+}
+
+.bg-primary{
+	background-color: var(--color-primary) !important;
+}
+
+.bg-secondary{
+	background-color: var(--color-secondary) !important;
 }
 
 .h1{

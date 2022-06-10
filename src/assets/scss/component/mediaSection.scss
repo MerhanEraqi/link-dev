@@ -1,0 +1,48 @@
+.media-container {
+    h2{
+        font-weight: bold;
+    }
+  .filter {
+      padding-bottom: 30px;
+    .filter-btn {
+      background: #E3E3E3;
+      color: #253776;
+      border-radius: 10px;
+      margin: 0 15px;
+      &.active, &:hover {
+        background: #13beff;
+        color: white;
+        transition: all 0.3s linear 0s;
+      }
+    }
+  }
+  .card {
+    min-height: 520px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 35px;
+    overflow: hidden;
+    border: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+      rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+    .card-img {
+      height: 323px;
+      object-fit: cover;
+    }
+    .card-text {
+      font-weight: bold;
+    }
+    .icon {
+      font-size: 20px;
+      width: fit-content;
+      padding-right: 13px;
+      color: #13beff;
+    }
+    .cat-section {
+      border-radius: 25px;
+    }
+    .share-btns button {
+      color: #13beff;
+    }
+  }
+}
