@@ -1,28 +1,37 @@
+
 .main-slider {
+  background: white;
   overflow: hidden;
-  min-height: calc(100vh - 102px);
+  height: calc(100vh - 102px);
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  .slider-bg{
-      position: absolute;
-      right: -15%;
-      top: -18%;
+  .slider-bg {
+    position: absolute;
+    right: -15%;
+    top: -18%;
+    // slider bg animation
+    animation-name: spinning;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
   .slider-content {
+    position: relative;
+    z-index: 10;
     .slider-img {
-        .big-img{
-            object-fit: contain;
-            -ms-transform: scale(1.5);
-            -moz-transform: scale(1.5);
-            -webkit-transform: scale(1.5);
-            -o-transform: scale(1.5);
-            transform: scale(1.5);
-            position: relative;
-            top: 229px;
-    
-        }
+      .big-img {
+        object-fit: contain;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+        position: relative;
+        top: 229px;
+      }
     }
     .content {
       display: flex;
@@ -35,45 +44,80 @@
       .slider-h {
         font-weight: 700;
         line-height: 1.2;
+        position: relative;
+        span {
+          z-index: 1;
+        }
         svg {
-            top: 38px;
-            right: 0;
-            z-index: -1;
-          }
+          top: 38px;
+          right: 0;
+          z-index: 1;
+        }
       }
       .slider-p {
         line-height: 1.5;
         padding: 34px 0;
         width: 90%;
       }
-      .slider-btns{
-          .play-btn{
-              text-decoration: none;
-              font-weight: 600;
-              cursor: pointer;
-              .play-icon{
-                height: 52px;
-                width: 52px;    
-                color: #FFFEFE;
-                background-color: #DF6951;
-                border-color: #DF6951;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-shadow: 0 0.9375rem 1.875rem 0 rgb(223 105 81 / 30%);
-                &:hover{
-                    background-color:  #b9543f;
-                    border-color:  #b9543f;
-                    transition: all 0.3s linear 0s;
-                }
-              }
+      .slider-btns {
+        .play-btn {
+          text-decoration: none;
+          font-weight: 600;
+          cursor: pointer;
+          .play-icon {
+            height: 52px;
+            width: 52px;
+            color: #fffefe;
+            background-color: #df6951;
+            border-color: #df6951;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0.9375rem 1.875rem 0 rgb(223 105 81 / 30%);
+            &:hover {
+              background-color: #b9543f;
+              border-color: #b9543f;
+              transition: all 0.3s linear 0s;
+            }
           }
+        }
+      }
+    }
+
+    // bullets
+    .pagination-present{
+      padding: 35px 0;
+      align-items: center;
+      .bullet{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        &.active{
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .line{
+        margin: 0 15px;
+        height: 1px;
+        background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+        background-position: top;
+        background-size: 10px 1px;
+        background-repeat: repeat-x;
       }
     }
   }
 
+  @media only screen and (max-width: 990px) {
+    min-height: auto;
+    height: fit-content;
+    .slider-img{
+      height: 500px;
+    }
+  }
+
   @media only screen and (min-width: 2400px) {
-      min-height: 700px;
-      height: 1000px;
+    min-height: 100vh;
+    height: 1000px;
   }
 }

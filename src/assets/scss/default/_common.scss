@@ -1,112 +1,129 @@
-body{
-    font-family: var(--font-primary);
+body {
+  font-family: var(--font-primary);
 }
-.p-font{
-    font-family: var(--font-primary) !important;
-}
-
-.color-primary{
-	color: var(--color-primary) !important;
+.p-font {
+  font-family: var(--font-primary) !important;
 }
 
-.color-secondary{
-	color: var(--color-secondary) !important;
+.color-primary {
+  color: var(--color-primary) !important;
 }
 
-.color-orange{
-	color: var(--color-orange) !important;
-}
-.color-pink{
-	color: var(--color-pink) !important;
+.color-secondary {
+  color: var(--color-secondary) !important;
 }
 
-.color-green{
-	color: var(--color-green) !important;
+.color-orange {
+  color: var(--color-orange) !important;
 }
-.bg-primary{
-	background-color: var(--color-primary) !important;
-}
-
-.bg-secondary{
-	background-color: var(--color-secondary) !important;
+.color-pink {
+  color: var(--color-pink) !important;
 }
 
-.bg-orange{
-	background-color: var(--color-orange) !important;
+.color-green {
+  color: var(--color-green) !important;
+}
+.bg-primary {
+  background-color: var(--color-primary) !important;
 }
 
-.bg-pink{
-	background-color: var(--color-pink) !important;
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
 }
 
-.bg-green{
-	background-color: var(--color-green) !important;
+.bg-orange {
+  background-color: var(--color-orange) !important;
 }
 
-.svg-orange{
-	path{
-		fill: var(--color-orange);
-	}
-}
-.svg-pink{
-	path{
-		fill: var(--color-pink);
-	}
-}
-.svg-green{
-	path{
-		fill: var(--color-green);
-	}
+.bg-pink {
+  background-color: var(--color-pink) !important;
 }
 
-.h1{
-	@include fluid(font-size, 50px, 75px);
+.bg-green {
+  background-color: var(--color-green) !important;
 }
 
-.h2{
-    @include fluid(font-size, 45px, 55px);
+.svg-orange {
+  path {
+    fill: var(--color-orange);
+  }
+}
+.svg-pink {
+  path {
+    fill: var(--color-pink);
+  }
+}
+.svg-green {
+  path {
+    fill: var(--color-green);
+  }
 }
 
-.h3{
-	@include fluid(font-size, 40px, 50px);
+.h1 {
+  @include fluid(font-size, 50px, 75px);
 }
 
-.h4{
-	@include fluid(font-size, 30px, 40px);
+.h2 {
+  @include fluid(font-size, 45px, 55px);
 }
 
-.h5{
-	@include fluid(font-size, 18px, 20px);
+.h3 {
+  @include fluid(font-size, 40px, 50px);
 }
 
-.h6{
-	@include fluid(font-size, 14px, 18px);
+.h4 {
+  @include fluid(font-size, 30px, 40px);
 }
 
-.p-f-5{
-	@include fluid(font-size, 13px, 13px);
+.h5 {
+  @include fluid(font-size, 18px, 20px);
 }
 
-.p-f-4{
-	@include fluid(font-size, 12px, 16px);
+.h6 {
+  @include fluid(font-size, 14px, 18px);
 }
 
-.p-f-3{
-	@include fluid(font-size, 19px, 21px);
+.p-f-5 {
+  @include fluid(font-size, 13px, 13px);
 }
 
-.p-f-2{
-	@include fluid(font-size, 20px, 25px);
+.p-f-4 {
+  @include fluid(font-size, 12px, 16px);
 }
 
-.p-f-1{
-	@include fluid(font-size, 22px, 28px);
+.p-f-3 {
+  @include fluid(font-size, 19px, 21px);
 }
 
-
-.container{
-
-	@media only screen and (min-width: 3900px) {
-		max-width: 25% !important;
-	  }
+.p-f-2 {
+  @include fluid(font-size, 20px, 25px);
 }
+
+.p-f-1 {
+  @include fluid(font-size, 22px, 28px);
+}
+
+.container {
+  @media only screen and (min-width: 3900px) {
+    max-width: 25% !important;
+  }
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.line-clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+  }
+
+.line-clamp-3 {
+	-webkit-line-clamp: 3;
+  }

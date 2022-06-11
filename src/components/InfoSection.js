@@ -9,7 +9,7 @@ const InfoSection = () => {
       <div className="text-bg">Things We Do</div>
       <div className="image-container-row row w-100 justify-content-end m-0 align-items-center">
         <div className="col-12 col-sm-12 col-md-6 col-lg-5 p-0">
-          <div className=""="image-container w-100">
+          <div className="image-container w-100">
             <div id="item-0" className="img">
               <p className="title p-f-2">
                 Crafty Mind
