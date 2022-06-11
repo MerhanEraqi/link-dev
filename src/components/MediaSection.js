@@ -14,23 +14,22 @@ const MediaSection = () => {
     fetch("https://api.npoint.io/91298d970c27e9a06518")
       .then((response) => response.json())
       .then((data) => setCategories(data.newsCategory))
-      .catch((err) => console.log(err));
 
     fetch("https://api.npoint.io/d275425a434e02acf2f7")
       .then((response) => response.json())
-      .then((data) =>{
-        let sortData = data.News.sort((a,b) => compareDates(a.publishedDate,b.publishedDate))
-        console.log(sortData)
-        return setNews(sortData)
+      .then((data) => {
+        let sortData = data.News.sort((a, b) =>
+          compareDates(a.publishedDate, b.publishedDate)
+        );
+        return setNews(sortData);
       })
-      .catch((err) => console.log(err));
   }, []);
 
-  function compareDates(date1, date2){
+  function compareDates(date1, date2) {
     let _date1 = new Date(date1);
     let _date2 = new Date(date2);
 
-    return  _date2.getTime() -_date1.getTime()
+    return _date2.getTime() - _date1.getTime();
   }
 
   function handelCategoryChange(category) {
@@ -61,7 +60,7 @@ const MediaSection = () => {
         handelCategoryChange={handelCategoryChange}
       />
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {!selectedCategory && news.length > 0 ? (
+        {news.length > 0 && !selectedCategory ? (
           news.map(
             (el, i) =>
               el.showOnHomepage == "yes" && (
