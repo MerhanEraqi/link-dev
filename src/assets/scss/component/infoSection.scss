@@ -37,9 +37,12 @@
       top: 0;
       color: white;
         font-weight: bolder;
-        -webkit-text-stroke: 0.5px #f9fafb;
-        color: transparent;
-        text-shadow: 1px 16px 0 rgb(255 255 255), -9px -5px 0 rgb(0 0 0 / 0%);
+        span{
+          -webkit-text-stroke: 0.5px #f9fafb;
+          color: transparent;
+          text-shadow: 1px 16px 0 rgb(255 255 255), -9px -5px 0 rgb(0 0 0 / 0%);
+  
+        }
     }
     .img {
       height: 240px;

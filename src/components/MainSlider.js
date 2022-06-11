@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,10 +20,8 @@ import "../assets/scss/default/_mixins.scss";
 import "../assets/scss/default/_variables.scss";
 import "../assets/scss/component/mainSlider.scss";
 
-import GeneralBtn from "./GeneralBtn";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import Slider from "./Slider";
+import data from "../services/slides.json";
 
 SwiperCore.use([Navigation, Pagination, A11y]);
 
@@ -39,42 +37,22 @@ const MainSlider = () => {
       modules={[Parallax, Pagination, Navigation, EffectFade]}
       className="mySwiper"
     >
-      <SwiperSlide className="next">
-        <Slider
-          themeColor="#F215B6"
-          category="MARKING"
-          title={["25 Years of", <br/>,  "Business Growth"]}
-          description="Link Development, the global technology solutions provider and an
-            A15 company, unveiled today that it has recently marked its Silver
-            Jubilee anniversary."
-          videoUrl="./"
-          scaleImg="true"
-          index={1}
-        />
-      </SwiperSlide>
-      <SwiperSlide className="next">
-        <Slider
-          themeColor="#A6E51C"
-          category="TRENDY INSIDE-OUT"
-          title={["Crafty Minds", <br/>,  "Reshaping"]}
-          description="Link Development,Our people, processes, and technologies thrive
-            on digital breakthroughs."
-          videoUrl="./"
-          scaleImg="false"
-          index={2}
-        />
-      </SwiperSlide>
-      <SwiperSlide className="next">
-        <Slider
-          themeColor="#FF7C16"
-          category="OUTSOURCE"
-          title={["Global IT", <br/>,  "Experts"]}
-          description="On-shore, offshore, nearshore and hybrid models for dedicated development, product building and staff augmentation."
-          videoUrl="./"
-          scaleImg="false"
-          index={3}
-        />
-      </SwiperSlide>
+      {data.slides.map((slide, i) => (
+        <SwiperSlide className="next" key={slide.id}>
+          <Slider
+            key={i + slide.id}
+            id={slide.id}
+            themeColor={'#'+slide.colorCode}
+            category={slide.category}
+            title={slide.title}
+            description={slide.brief}
+            imgUrl={slide.imgUrl}
+            videoUrl={slide.videoUrl}
+            scaleImg="true"
+            slides={data.slides}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

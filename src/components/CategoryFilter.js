@@ -15,7 +15,7 @@ const CategoryFilter = (props) => {
       >
         All News
       </button>
-      {props.categories.map((cat, i) => (
+      {props.categories.length > 0  && props.categories.map((cat, i) => (
         <button
           onClick={() => handleCatClikcked(cat)}
           key={i}

@@ -4,85 +4,85 @@ import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-sv
 
 export default function Footer() {
   return (
-    <div class="container">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5">
-        <div class="col-12 col-sm-12 col-md-3">
+    <div className="container">
+      <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5">
+        <div className="col-12 col-sm-12 col-md-3">
           <a
             href="/"
-            class="footer-logo d-flex align-items-center mb-3 text-decoration-none"
+            className="footer-logo d-flex align-items-center mb-3 text-decoration-none"
           >
             <img className="img-fluid w-75" src="./images/logo.png" />
           </a>
-          <p class="color-secondary p-f-5">
+          <p className="color-secondary p-f-5">
             We make technology produce productive, adaptable and sustainable
             business experiences.
           </p>
         </div>
 
-        <div class="col-5 col-sm-5 col-md-1 mb-3">
+        <div className="col-5 col-sm-5 col-md-1 mb-3">
           <h5 className="h5 title">Company</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 About
               </a>
             </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 Careers
               </a>
             </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 Mobile
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="col-5 col-sm-5 col-md-1 mb-3">
+        <div className="col-5 col-sm-5 col-md-1 mb-3">
           <h5 className="h5 title">Contact</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 Help/FAQ
               </a>
             </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 Press
               </a>
             </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 Affilates
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="col-5 col-sm-5 col-md-1 mb-3">
+        <div className="col-5 col-sm-5 col-md-1 mb-3">
           <h5 className="h5 title">Media</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+          <ul className="nav flex-column">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 News
               </a>
             </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 Photo
               </a>
             </li>
-            <li class="nav-item mb-2">
-              <a href="#" class="nav-link text-muted h6">
+            <li className="nav-item mb-2">
+              <a href="#" className="nav-link text-muted h6">
                 Video
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="media col-8 col-sm-8 col-md-3 mb-3 row justify-content-between align-items-center flex-column">
+        <div className="media col-8 col-sm-8 col-md-3 mb-3 row justify-content-between align-items-center flex-column">
           <div className="row w-100 justify-content-evenly">
             <div className="social-media">
               <a className="icon">

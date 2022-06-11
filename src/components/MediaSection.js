@@ -18,9 +18,20 @@ const MediaSection = () => {
 
     fetch("https://api.npoint.io/d275425a434e02acf2f7")
       .then((response) => response.json())
-      .then((data) => setNews(data.News))
+      .then((data) =>{
+        let sortData = data.News.sort((a,b) => compareDates(a.publishedDate,b.publishedDate))
+        console.log(sortData)
+        return setNews(sortData)
+      })
       .catch((err) => console.log(err));
   }, []);
+
+  function compareDates(date1, date2){
+    let _date1 = new Date(date1);
+    let _date2 = new Date(date2);
+
+    return  _date2.getTime() -_date1.getTime()
+  }
 
   function handelCategoryChange(category) {
     setSelectedCategory(category);
@@ -35,7 +46,7 @@ const MediaSection = () => {
     }
   }
 
-  function filterCategoryById(id){
+  function filterCategoryById(id) {
     let cat = categories.filter((el) => el.id == id);
     return cat[0];
   }
@@ -50,27 +61,7 @@ const MediaSection = () => {
         handelCategoryChange={handelCategoryChange}
       />
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {selectedCategory ? (
-          filteredList.length > 0 ? (
-            filteredList.map(
-              (el, i) =>
-                el.showOnHomepage == "yes" && (
-                  <MediaCard
-                    key={el.id}
-                    news={el}
-                    category={filterCategoryById(el.categoryID)}
-                  />
-                )
-            )
-          ) : (
-            <div
-              class="alert alert-danger my-5 mx-auto text-center"
-              role="alert"
-            >
-              No News Found Under This Category
-            </div>
-          )
-        ) : (
+        {!selectedCategory && news.length > 0 ? (
           news.map(
             (el, i) =>
               el.showOnHomepage == "yes" && (
@@ -78,9 +69,27 @@ const MediaSection = () => {
                   key={el.id}
                   news={el}
                   category={filterCategoryById(el.categoryID)}
-                  />
+                />
               )
           )
+        ) : filteredList.length > 0 ? (
+          filteredList.map(
+            (el, i) =>
+              el.showOnHomepage == "yes" && (
+                <MediaCard
+                  key={el.id}
+                  news={el}
+                  category={filterCategoryById(el.categoryID)}
+                />
+              )
+          )
+        ) : (
+          <div
+            className="alert alert-danger my-5 mx-auto text-center"
+            role="alert"
+          >
+            No News Found Under This Category
+          </div>
         )}
       </div>
       <div className="d-flex justify-content-center align-items-center py-5">

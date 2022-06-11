@@ -104,6 +104,10 @@
         background-position: top;
         background-size: 10px 1px;
         background-repeat: repeat-x;
+        &:last-child{
+          width: 0;
+          height: 0;
+        }
       }
     }
   }

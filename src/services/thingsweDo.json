@@ -1,0 +1,39 @@
+{
+    "thingsWeDo": {
+        "id": 0,
+        "title": "We Deliver Digital Productivity",
+        "breif": "We craft technology solutions that digitally bond and transform the productivity of our customers and their citizens, workers, consumers and partners.",
+        "data": [
+            {
+                "id": 1,
+                "title": "Crafty Mind",
+                "imgUrl": "Layer6@2x.png",
+                "readMoreUrl": ""
+            },
+            {
+                "id": 2,
+                "title": "Services",
+                "imgUrl": "Layer 46@2x.png",
+                "readMoreUrl": ""
+            },
+            {
+                "id": 3,
+                "title": "Envision",
+                "imgUrl": "Layerd6@2x.png",
+                "readMoreUrl": ""
+            },
+            {
+                "id": 4,
+                "title": "Dynamics 365",
+                "imgUrl": "1446779582-melsungen-magdeburg@2x.png",
+                "readMoreUrl": ""
+            },
+            {
+                "id": 5,
+                "title": "Transformation",
+                "imgUrl": "istockphoto-1327568875-170667a.jpg",
+                "readMoreUrl": ""
+            }
+        ]
+    }
+}
