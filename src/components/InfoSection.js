@@ -8,7 +8,7 @@ const InfoSection = () => {
   let thingsWeDoData = data.thingsWeDo;
   return (
     <div className="info-section">
-      <div className="text-bg">Things We Do</div>
+      <div className="text-bg d-none d-sm-none d-md-block">Things We Do</div>
       <div className="image-container-row row w-100 justify-content-end m-0 align-items-center">
         <div className="col-12 col-sm-12 col-md-6 col-lg-5 p-0">
           <div className="image-container w-100">
@@ -31,7 +31,7 @@ const InfoSection = () => {
           </div>
         </div>
         <div className="col-12 col-sm-12 col-md-6 content p-0">
-          <h2 className="h2 p-5 pb-3 color-primary">{thingsWeDoData.title}</h2>
+          <h2 className="h1 p-5 pb-3 color-primary">{thingsWeDoData.title}</h2>
           <p className="p-f-1 p-5 pt-2 text-white">{thingsWeDoData.breif}</p>
         </div>
       </div>

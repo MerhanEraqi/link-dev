@@ -3,6 +3,7 @@ import MediaCard from "./MediaCard";
 import "../assets/scss/component/mediaSection.scss";
 import CategoryFilter from "./CategoryFilter";
 import GeneralBtn from "./GeneralBtn";
+import axios from "axios";
 
 const MediaSection = () => {
   const [news, setNews] = useState([]);
@@ -11,19 +12,30 @@ const MediaSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   useEffect(() => {
-    fetch("https://api.npoint.io/91298d970c27e9a06518")
-      .then((response) => response.json())
-      .then((data) => setCategories(data.newsCategory))
+    const getNews = async function () {
+      const baseURL = "https://api.npoint.io/d275425a434e02acf2f7";
+      const response = await axios.get(baseURL);
 
-    fetch("https://api.npoint.io/d275425a434e02acf2f7")
-      .then((response) => response.json())
-      .then((data) => {
-        let sortData = data.News.sort((a, b) =>
-          compareDates(a.publishedDate, b.publishedDate)
-        );
-        return setNews(sortData);
-      })
-  }, []);
+      const data = response.data.News.sort((a, b) =>
+        compareDates(a.publishedDate, b.publishedDate)
+      );
+      console.log("data", data);
+      
+      setNews(data);
+    }
+
+    const getCategories = async function () {
+      const baseURL = "https://api.npoint.io/91298d970c27e9a06518";
+      const response = await axios.get(baseURL);
+
+      console.log("data", response.data);
+      
+			//set characters to characters state
+      setCategories(response.data.newsCategory);
+    }
+    getNews();
+    getCategories();
+  }, [])
 
   function compareDates(date1, date2) {
     let _date1 = new Date(date1);
@@ -74,8 +86,8 @@ const MediaSection = () => {
         ) : filteredList.length > 0 ? (
           filteredList.map(
             (el, i) =>
-              el.showOnHomepage == "yes" && (
-                <MediaCard
+            el.showOnHomepage == "yes" && (
+              <MediaCard
                   key={el.id}
                   news={el}
                   category={filterCategoryById(el.categoryID)}

@@ -1,3 +1,9 @@
+.header-container{
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+
+
 header {
   img {
     width: 10vw;
@@ -31,4 +37,6 @@ header {
         @include transition(color, 0.3s, linear, 0s);
     }
   }
+}
+
 }

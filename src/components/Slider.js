@@ -106,7 +106,7 @@ export default function Slider(props) {
           data-swiper-parallax="5000"
           className="slider-img col-9 col-sm-9 col-lg-6 p-0"
         >
-          <img className={"img-fluid w-100"} src={"images/" + props.imgUrl} />
+          <img className={"img-fluid w-100 " + (props.index == 0 ? 'big-img' : '') + (props.index == 1 ? 'big-img top-0' : '')} src={"images/" + props.imgUrl} />
         </div>
       </div>
     </div>

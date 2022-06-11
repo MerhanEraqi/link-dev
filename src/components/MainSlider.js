@@ -50,6 +50,7 @@ const MainSlider = () => {
             videoUrl={slide.videoUrl}
             scaleImg="true"
             slides={data.slides}
+            index={i}
           />
         </SwiperSlide>
       ))}

@@ -4,8 +4,8 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
   return (
-    <div className="container header-container">
-      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+    <div className="header-container py-3">
+      <header className="container px-0 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
         <a
           href="/"
           className="d-flex align-items-center col-md-2 mb-2 mb-md-0 text-dark text-decoration-none"
